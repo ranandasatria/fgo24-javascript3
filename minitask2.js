@@ -102,3 +102,37 @@ console.log(diakhiriDengan.endsWith("lagu"))
 //20. toUpperCase() - Mengubah string menjadi huruf besar
 const hurufBesar = "saya suka mendengar lagu"
 console.log(hurufBesar.toUpperCase())
+
+// 5 built-in function
+
+// 1. parseInt() - Mengubah string menjadi bilangan bulat (integer)
+let stringAngka = "123"
+let angkaBulat = parseInt(stringAngka)
+console.log(angkaBulat) 
+
+// 2. parseFloat() - Mengubah string menjadi bilangan desimal (floating point)
+let stringDesimal = "123.45"
+let angkaDesimal = parseFloat(stringDesimal)
+console.log(angkaDesimal) 
+
+// 3. isNaN() - Mengecek apakah sebuah nilai adalah NaN (Not-a-Number)
+let nilai1 = "abc"
+console.log(isNaN(nilai1)) 
+
+let nilai2 = 123
+console.log(isNaN(nilai2))
+
+// 4. Number() - Mengubah nilai menjadi tipe data number (baik integer maupun float)
+let stringNumber1 = "42"
+let convertedNumber1 = Number(stringNumber1)
+console.log(convertedNumber1) 
+
+let stringNumber2 = "3.14"
+let convertedNumber2 = Number(stringNumber2)
+console.log(convertedNumber2) 
+
+// 5. String() - Mengubah nilai menjadi tipe data string
+let angka = 456
+let jadiString = String(angka)
+console.log(jadiString) 
+console.log(typeof jadiString) 
