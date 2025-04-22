@@ -14,27 +14,41 @@ function wait(name, delay) {
     })
   }
   
-  wait("John", 1500)
-    .then(() => wait("Ed", 2000))
-    .then(() => wait("Jane", 500))
-    .catch((error) => {
-      console.log("Terjadi kesalahan:", error)
+  // Menggunakan wait-then
+//   wait("John", 1500)
+//     .then(() => wait("Ed", 2000))
+//     .then(() => wait("Jane", 500))
+//     .catch((error) => {
+//       console.log("Terjadi kesalahan:", error)
+//     }
+// )
+
+// Menggunakan async-await
+async function doingProcess(){
+    try{
+    await wait("John", 1500)
+    await wait("Ed", 2000)
+    await wait("Jane", 500)
+    }catch(error){
+        console.log(error)
     }
-)
+}
+doingProcess()
 
 
-// async function runQueue() {
-//     await wait("Jane", 500);
-//     await wait("John", 1500);
-//     await wait("Ed", 2000);
-//   }
-  
-//   runQueue();
 
-// async function doingProcess(){
-//     await wait("Jane", 500)
-//     await wait("John", 1500)
-//     await wait("Ed", 2000);
+
+
+
+// contoh sintaks
+// function wait(greet){
+//     return new Promise ((resolve, reject)=>{
+//     if(greet === "Selamat siang"){
+//         reject("gagal")
+//     }else{
+//         setTimeout(()=>{
+//             resolve("berhasil")
+//         },1000)
+//     }
+//     })
 // }
-
-// doingProcess()
